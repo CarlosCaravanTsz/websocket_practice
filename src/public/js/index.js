@@ -1,6 +1,6 @@
 const socket = io();
 
-let user = sessionStorage.getItem('user') || ''
+let user = sessionStorage.getItem('user') || '';
 
 if (!user) {
     Swal.fire({
@@ -37,13 +37,12 @@ chatbox.addEventListener('keyup', event => {
 
 // RECIBIR MENSAJES
 socket.on('logs', data => {
-    let messages = ' '
+    let messages = ''
 
     data.forEach(msn => {
         messages = `<p><i>${msn.user}</i>: ${msn.message}</p>` + messages;
     });
     logs.innerHTML = messages
-})
-
+});
 
 
