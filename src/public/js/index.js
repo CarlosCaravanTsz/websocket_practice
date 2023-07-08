@@ -30,7 +30,7 @@ chatbox.addEventListener('keyup', event => {
                 user,
                 message
             });
-            chatbox.vaue = ''
+            chatbox.value = ''
         }
     }
 });
